@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>About Us - My Flask App</title>
+        <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    </head>
+    <body>
+        <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+            <div class="container">
+                <a class="navbar-brand" href="#">My Flask App</a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarNav">
+                    <ul class="navbar-nav ms-auto">
+                        <li class="nav-item">
+                            <a class="nav-link" href="{{ url_for('index') }}">Home</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link active" href="{{ url_for('about') }}">About</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">Contact</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+
+        <main class="container my-5">
+            <div class="row">
+                <div class="col-lg-8">
+                    <h1>About Our Project</h1>
+                    <p class="lead">Learn more about our Flask application and the team behind it.</p>
+                    
+                    <div class="card my-4">
+                        <div class="card-body">
+                            <h2 class="card-title">Our Mission</h2>
+                            <p>
+                                Our mission is to provide a simple, clean, and efficient web application framework
+                                that helps developers create amazing applications quickly and with minimal effort.
+                                We believe in clean code, great documentation, and developer happiness.
+                            </p>
+                        </div>
+                    </div>
+                    
+                    <h3>Our Story</h3>
+                    <p>
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam in dui mauris.
+                        Vivamus hendrerit arcu sed erat molestie vehicula. Sed auctor neque eu tellus
+                        rhoncus ut eleifend nibh porttitor. Ut in nulla enim.
+                    </p>
+                    
+                    <p>
+                        Phasellus ultrices nulla quis nibh. Quisque a lectus. Donec consectetuer ligula
+                        vulputate sem tristique cursus. Nam nulla quam, gravida non, commodo a, sodales sit amet, nisi.
+                    </p>
+                    
+                    <h3>Technologies We Use</h3>
+                    <ul>
+                        <li>Python 3</li>
+                        <li>Flask Framework</li>
+                        <li>SQLAlchemy</li>
+                        <li>Bootstrap 5</li>
+                        <li>JavaScript</li>
+                    </ul>
+                </div>
+                
+                <div class="col-lg-4">
+                    <div class="card mb-4">
+                        <div class="card-body">
+                            <h3 class="card-title">Team Members</h3>
+                            <ul class="list-group list-group-flush">
+                                <li class="list-group-item">
+                                    <strong>John Doe</strong> - Lead Developer
+                                </li>
+                                <li class="list-group-item">
+                                    <strong>Jane Smith</strong> - UI/UX Designer
+                                </li>
+                                <li class="list-group-item">
+                                    <strong>Mark Johnson</strong> - Database Expert
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    
+                    <div class="card">
+                        <div class="card-body">
+                            <h3 class="card-title">Connect With Us</h3>
+                            <div class="d-grid gap-2">
+                                <a href="#" class="btn btn-outline-primary">GitHub</a>
+                                <a href="#" class="btn btn-outline-info">Twitter</a>
+                                <a href="#" class="btn btn-outline-dark">LinkedIn</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </main>
+
+        <footer class="bg-dark text-white py-4">
+            <div class="container text-center">
+                <p>© 2025 My Flask App. All rights reserved.</p>
+            </div>
+        </footer>
+
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+        <script src="{{ url_for('static', filename='js/main.js') }}"></script>
+    </body>
+</html>
