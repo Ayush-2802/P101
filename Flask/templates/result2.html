@@ -1,0 +1,14 @@
+<style>
+    #fail {
+        color: red;
+    }
+    #pass {
+        color: blue;
+    }
+</style>
+<h2>Marks obtained : {{results}}</h2>
+{% if results > 50 %}
+<h3 id="pass">Result : Passed</h3>
+{% else %}
+<h3 id="fail">Result : Failed</h3>
+{% endif %}
