@@ -45,20 +45,20 @@ def delete_task(task_id):
     tasks = [task for task in tasks if task['id'] != task_id]
     return jsonify({'message': 'Task Deleted!'})
 
-@app.route('/tasks/<int:task_id>/delete', methods=['POST'])
-def delete_task_form(task_id):
-    global tasks
-    tasks = [task for task in tasks if task['id'] != task_id]
-    return render_template('home.html', tasks=tasks)
+# @app.route('/tasks/<int:task_id>/delete', methods=['POST'])
+# def delete_task_form(task_id):
+#     global tasks
+#     tasks = [task for task in tasks if task['id'] != task_id]
+#     return render_template('home.html', tasks=tasks)
 
-@app.route('/tasks/<int:task_id>/update', methods=['POST'])
-def update_task_form(task_id):
-    new_text = request.form['task']
-    for task in tasks:
-        if task['id'] == task_id:
-            task['task'] = new_text
-            break
-    return render_template('home.html', tasks=tasks)
+# @app.route('/tasks/<int:task_id>/update', methods=['POST'])
+# def update_task_form(task_id):
+#     new_text = request.form['task']
+#     for task in tasks:
+#         if task['id'] == task_id:
+#             task['task'] = new_text
+#             break
+#     return render_template('home.html', tasks=tasks)
 
 if __name__=="__main__":
     app.run(debug=True)
