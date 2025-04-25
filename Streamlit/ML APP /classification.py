@@ -10,6 +10,3 @@ def load():
     df['species'] = iris.target
     return df, iris.target_names
 
-
-
-
