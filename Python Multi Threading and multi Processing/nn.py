@@ -28,8 +28,8 @@ if __name__=="__main__":
     
     # pool of worker
     with multiprocessing.Pool() as pool:
-        res = pool.map(fact,num)
+    #     res = pool.map(fact,num)
 
-    et = time.time()
-    print(f"Result:{res}")
-    print(f"Time Taken : {et-st} sec")
+    # et = time.time()
+    # print(f"Result:{res}")
+    # print(f"Time Taken : {et-st} sec")
